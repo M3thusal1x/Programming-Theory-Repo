@@ -28,16 +28,19 @@ public abstract class Animal : MonoBehaviour
     // Animal speed
     public float Speed { get; set; }
 
-    public abstract void move();
+    public abstract void Move();
 
-    public abstract void jump();
+    public abstract void Jump();
 
     // Spawn animal at specified position
-    public abstract void spawn(Vector3 position);
+    public virtual void Spawn(Vector3 position)
+    {
+        Instantiate(this, position, this.transform.rotation);
+    }
 
     // Spawn animal at origin
-    public void spawn()
+    public virtual void Spawn()
     {
-        spawn(Vector3.zero);
+        Spawn(Vector3.zero);
     }
 }
