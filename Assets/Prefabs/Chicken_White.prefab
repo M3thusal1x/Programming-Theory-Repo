@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 476096}
   - component: {fileID: 9567898}
   m_Layer: 0
-  m_Name: Animal_Chicken_White
+  m_Name: Chicken_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
