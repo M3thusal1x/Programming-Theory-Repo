@@ -30,8 +30,6 @@ public abstract class Animal : MonoBehaviour
 
     public abstract void Move();
 
-    public abstract void Jump();
-
     // Spawn animal at specified position
     public virtual void Spawn(Vector3 position)
     {
