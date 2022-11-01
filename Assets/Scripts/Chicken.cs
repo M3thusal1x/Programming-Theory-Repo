@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// INHERITANCE
 [RequireComponent(typeof(NavMeshAgent))]
 public class Chicken : Animal
 {
@@ -11,9 +12,9 @@ public class Chicken : Animal
     private float jumpPower = 100000;
     protected NavMeshAgent agent;
 
+    // POLYMORPHISM
     public override void Move()
     {
-        agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(target);
         agent.speed = base.Speed;
     }
@@ -21,6 +22,7 @@ public class Chicken : Animal
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         base.Speed = 2.0f;
         Move();
     }

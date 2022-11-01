@@ -7,7 +7,7 @@ public abstract class Animal : MonoBehaviour
 {
     private float timeSinceSpawn = 0.0f;
 
-    // internal Name
+    // ENCAPSULATION
     private string m_Name = "Animal";
     // Animal name. Name length may not exceed 10 characters.
     public string Name
@@ -25,17 +25,22 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // ENCAPSULATION
     // Animal speed
     public float Speed { get; set; }
 
+    // ABSTRACTION
     public abstract void Move();
 
+    // ABSTRACTION
     // Spawn animal at specified position
     public virtual void Spawn(Vector3 position)
     {
         Instantiate(this, position, this.transform.rotation);
     }
 
+    // ABSTRACTION
+    // POLYMORPHISM
     // Spawn animal at origin
     public virtual void Spawn()
     {
