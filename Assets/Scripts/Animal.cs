@@ -25,13 +25,6 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        // Demo movement
-
-        
-    }
-
     // Animal speed
     public float Speed { get; set; }
 
