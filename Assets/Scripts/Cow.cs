@@ -12,6 +12,7 @@ public class Cow : Animal
     private int currentWayPointIndex = 0;
     private bool isMoving = false;
 
+    // ABSTRACTION
     // POLYMORPHISM
     public override void Move()
     {
