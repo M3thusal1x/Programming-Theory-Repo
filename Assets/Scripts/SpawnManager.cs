@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Get number of animals from title screen input
+        NumberOfAnimals = MainManager.Instance.NumberOfAnimals;
         StartCoroutine(SpawnAnimals());
     }
 

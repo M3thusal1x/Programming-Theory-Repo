@@ -265,6 +265,7 @@ MonoBehaviour:
   - {fileID: -5377100781627812756, guid: c7ca0992ba00761469f731111e56b107, type: 3}
   - {fileID: 2254677634209674242, guid: 49b874b9460c6754c829d7cb541a99db, type: 3}
   - {fileID: 2694736486271810154, guid: 85de8c5eef336ad48900b2ac3e7bf65d, type: 3}
+  - {fileID: -7521372899848024841, guid: 9bf484c5ec3d3bf43b2034c829f1abbe, type: 3}
   NumberOfAnimals: 10
 --- !u!1 &1985126902
 GameObject:
