@@ -12,17 +12,17 @@ public abstract class Animal : MonoBehaviour
     // ENCAPSULATION
     private string m_Name = "Animal";
     // Animal name. Name length may not exceed 10 characters.
-    public string Name
+    public string AnimalName
     {
         get { return m_Name; }
         set { 
-            if (Name.Length > 10)
+            if (value.Length > 10)
             {
                 Debug.Log("You can't use animal names with more than 10 characters!");
             }
             else
             {
-                m_Name = Name;
+                m_Name = value;
             }
         }
     }

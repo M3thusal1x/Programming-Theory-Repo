@@ -24,8 +24,8 @@ public class Chicken : Animal
         agent = GetComponent<NavMeshAgent>();
         base.Speed = 2.0f;
         ChickenCounter++;
-        base.Name = "Chicken" + ChickenCounter;
-        Debug.Log("Animal " + base.Name + " has spawned!");
+        AnimalName = "Chicken" + ChickenCounter;
+        Debug.Log("Animal " + AnimalName + " has spawned!");
         Move();
     }
 

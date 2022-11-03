@@ -16,7 +16,8 @@ public class Chick : Chicken
         agent = GetComponent<NavMeshAgent>();
         defaultSpawnPoint = new Vector3(4, 4, 0);
         ChicksCounter++;
-        base.Name = "Chicks" + ChicksCounter;
+        AnimalName = "Chicks" + ChicksCounter;
+        Debug.Log("Animal " + AnimalName + " has spawned!");
         base.Speed = 1.0f;
         base.Move();
     }

@@ -30,11 +30,11 @@ public class Cow : Animal
         wayPoints[1] = new Vector3(20, 0, 3);
         wayPoints[2] = new Vector3(0, 0, -5);
         CowCounter++;
-        base.Name = "Cow" + CowCounter;
+        AnimalName = "Cow" + CowCounter;
         base.Speed = 3.0f;
         agent = GetComponent<NavMeshAgent>();
         boxCollider = GetComponent<BoxCollider>();
-        Debug.Log("Animal " + base.Name + " has spawned!");
+        Debug.Log("Animal " + AnimalName + " has spawned!");
         Move();
     }
 
