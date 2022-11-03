@@ -7,15 +7,14 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Chicken : Animal
 {
+    static private int ChickenCounter = 0;
     private Rigidbody chickenRb;
-    private Vector3 target = new Vector3(-40, 0, 0);
-    private float jumpPower = 100000;
     protected NavMeshAgent agent;
 
     // POLYMORPHISM
     public override void Move()
     {
-        agent.SetDestination(target);
+        agent.SetDestination(RandomPosition());
         agent.speed = base.Speed;
     }
 
@@ -24,11 +23,19 @@ public class Chicken : Animal
     {
         agent = GetComponent<NavMeshAgent>();
         base.Speed = 2.0f;
+        ChickenCounter++;
+        base.Name = "Chicken" + ChickenCounter;
+        Debug.Log("Animal " + base.Name + " has spawned!");
         Move();
     }
 
     // Update is called once per frame
     void Update()
     {
+        float distance = (agent.destination - gameObject.transform.position).magnitude;
+        if (distance < 0.5f)
+        {
+            Move();
+        }
     }
 }

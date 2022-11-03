@@ -5,7 +5,9 @@ using UnityEngine;
 // Abstract parent class for all animals.
 public abstract class Animal : MonoBehaviour
 {
-    private float timeSinceSpawn = 0.0f;
+    private float xRange = 15;
+    private float zRange = 15;
+    private float yPosition = 0f;
 
     // ENCAPSULATION
     private string m_Name = "Animal";
@@ -41,9 +43,15 @@ public abstract class Animal : MonoBehaviour
 
     // ABSTRACTION
     // POLYMORPHISM
-    // Spawn animal at origin
+    // Spawn animal at random position
     public virtual void Spawn()
     {
-        Spawn(Vector3.zero);
+        Spawn(RandomPosition());
+    }
+
+    // Random position in visible area.
+    protected Vector3 RandomPosition()
+    {
+        return new Vector3(Random.Range(-xRange, xRange), yPosition, Random.Range(-zRange, zRange));
     }
 }

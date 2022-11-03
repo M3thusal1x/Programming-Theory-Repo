@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 9503158}
   - component: {fileID: 1900660684715813498}
   - component: {fileID: -5377100781627812756}
+  - component: {fileID: 7319574533592150790}
   m_Layer: 0
   m_Name: Chick
   m_TagString: Untagged
@@ -182,6 +183,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ecf352e28b7414a84271a13518fa01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7319574533592150790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3257384, y: 6.3310547, z: 8.12753}
+  m_Center: {x: 0.01880427, y: 3.1050453, z: 0.24844937}
 --- !u!1 &113672
 GameObject:
   m_ObjectHideFlags: 0

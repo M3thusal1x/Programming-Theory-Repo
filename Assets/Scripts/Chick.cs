@@ -6,6 +6,7 @@ using UnityEngine.AI;
 // INHERITANCE
 public class Chick : Chicken
 {
+    static private int ChicksCounter = 0;
     private Vector3 defaultSpawnPoint;
 
     // Start is called before the first frame update
@@ -14,6 +15,8 @@ public class Chick : Chicken
         // initialization of agent is required by parent class
         agent = GetComponent<NavMeshAgent>();
         defaultSpawnPoint = new Vector3(4, 4, 0);
+        ChicksCounter++;
+        base.Name = "Chicks" + ChicksCounter;
         base.Speed = 1.0f;
         base.Move();
     }

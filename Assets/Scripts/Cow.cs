@@ -5,9 +5,12 @@ using UnityEngine.AI;
 
 // INHERITANCE
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(BoxCollider))]
 public class Cow : Animal
 {
+    private static int CowCounter = 0;
     private NavMeshAgent agent;
+    private BoxCollider boxCollider;
     private Vector3[] wayPoints = new Vector3[3];
     private int currentWayPointIndex = 0;
     private bool isMoving = false;
@@ -26,8 +29,12 @@ public class Cow : Animal
         wayPoints[0] = new Vector3(-20, 0, -2);
         wayPoints[1] = new Vector3(20, 0, 3);
         wayPoints[2] = new Vector3(0, 0, -5);
+        CowCounter++;
+        base.Name = "Cow" + CowCounter;
         base.Speed = 3.0f;
         agent = GetComponent<NavMeshAgent>();
+        boxCollider = GetComponent<BoxCollider>();
+        Debug.Log("Animal " + base.Name + " has spawned!");
         Move();
     }
 
